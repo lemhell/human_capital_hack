@@ -6,10 +6,10 @@ function updateUsers(data){
     snd = data[1]
 
     $("#fst_name").html(fst.name)
-    $("#fst_image").attr('src', "img/" + fst.id + ".jpeg")
+    $("#fst_image").attr('src', "img/" + fst.id + ".png")
                    .attr('onclick', "return submit_and_refresh(" + fst.id + ");")
     $("#snd_name").html(snd.name)
-    $("#snd_image").attr('src', "img/" + snd.id + ".jpeg")
+    $("#snd_image").attr('src', "img/" + snd.id + ".png")
                    .attr('onclick', "return submit_and_refresh(" + snd.id + ");")
 
 //    onclick="return submit_and_refresh(3);

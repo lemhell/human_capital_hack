@@ -22,28 +22,28 @@ var chart = new CanvasJS.Chart("chartContainer", {
 
 	data: [{
 		type: "stackedBar",
-		name: "Initial test",
+		name: "Stress resistance",
 		showInLegend: "true",
 		dataPoints: []
 	    },
 
         {
 	    type: "stackedBar",
-		name: "Java",
+		name: "Competence",
 		showInLegend: "true",
 		dataPoints: []
 	    },
 
         {
 	    type: "stackedBar",
-		name: "Python",
+		name: "Communication skills",
 		showInLegend: "true",
 		dataPoints: []
 	    },
 
 	    {
 		type: "stackedBar",
-		name: "Git",
+		name: "Efficiency",
 		showInLegend: "true",
 		dataPoints: []
 	    }
