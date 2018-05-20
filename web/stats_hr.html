@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teams stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <script src="js/stats_hr.js"></script>
+    <style>
+      html, body: {
+        background-color: #33373A;
+      }
+
+    </style>
+  </head>
+  <body style="background-color: #33373A;">
+    <div id="navigation" class="navbar navbar-inverse navbar-fixed-top"></div>
+
+    <div class="container">
+      <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+    </div> <!-- /container -->
+
+    <!-- scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/canvasjs.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('#navigation').load('html/nav.html');
+      });
+    </script>
+
+  </body>
+</html>

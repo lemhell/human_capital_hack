@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teams stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <script src="js/vote.js"></script>
+  </head>
+  <body>
+    <div id="navigation" class="navbar navbar-inverse navbar-fixed-top"></div>
+
+    <div class="row" style="padding-top:30pt">&nbsp</div>
+    <div class="text-center">
+        <h1>Who is better in <code style="font-size:30pt">git</code> for your taste?</h1>
+    </div>
+
+    <div class="row" style="padding-top:30pt">&nbsp</div>
+    <div class="row">
+        <div class="span1">
+            &nbsp
+        </div>
+        <div class="span4 text-center">
+            <img id="fst_image" class="img-circle photo">
+            <h3 id="fst_name"></h3>
+        </div>
+        <div class="span2 text-center" style="padding-top: 63px; font-size: 50pt;">
+            <h1>or</h1>
+        </div>
+        <div class="span4 text-center">
+            <input id="snd_image" type="image" class="img-circle photo">
+            <!--<input id="snd_image" type="image" class="img-circle photo" onclick="return submit_and_refresh(3);">-->
+            <h3 id="snd_name"></h3>
+        </div>
+        <div class="span1">
+            &nbsp
+        </div>
+
+    </div>
+
+    <!-- scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/canvasjs.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#navigation').load('html/nav.html');
+      });
+
+
+      function submit_and_refresh(identity) {
+
+        var xhr = new XMLHttpRequest();
+        var url = "http://127.0.0.1:5000/vote_set";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var json = JSON.parse(xhr.responseText);
+                console.log(json.email + ", " + json.password);
+            }
+        };
+        var data = JSON.stringify(identity);
+        xhr.send(data);
+        window.location.href="vote.html"
+
+      }
+
+
+    </script>
+
+  </body>
+</html>
