@@ -7,7 +7,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	theme: "dark2",
 
 	title:{
-		text:"HR rating"
+		text:"Team rating"
 	},
 //	axisX:{
 //		interval: 1
